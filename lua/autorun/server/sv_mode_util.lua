@@ -16,12 +16,12 @@ PlayModes.AdminChatCommands = {
 	"!modesadmin"
 }
 
-	util.AddNetworkString("playmodes_message")
-	util.AddNetworkString("playmodes_openmenu")
-	util.AddNetworkString("playmodes_openadminmenu")
-	util.AddNetworkString("playmodes_client_to_server")
-	util.AddNetworkString("playmodes_setTeam_other")
-	--util.AddNetworkString("playmodes_client_to_server")
+util.AddNetworkString("playmodes_message")
+util.AddNetworkString("playmodes_openmenu")
+util.AddNetworkString("playmodes_openadminmenu")
+util.AddNetworkString("playmodes_client_to_server")
+util.AddNetworkString("playmodes_setTeam_other")
+
 
 function PlayModes.LoadPerms()
 	
