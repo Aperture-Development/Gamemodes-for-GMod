@@ -212,12 +212,12 @@ hook.Add("PlayerLoadout","Modes_ReSpawn",function(ply)
 end)
 
 
-hook.Add("Initialize","Modes_InitScrapt",function()
+hook.Add("Initialize","Modes_InitScript",function()
 	
 	PlayModes.LoadPerms()
 	
 	if ULib then
-		ULib.ucl.registerAccess("modes_admin_gui","superadmin","Grants access to the Auto Mapchange abort command","Command")
+		ULib.ucl.registerAccess("modes_admin_gui","superadmin","Grants access to the Admin GUI of GMfG","Command")
 	elseif evolve then
 		table.Add( evolve.privileges, "modes_admin_gui" ) 
 		table.sort( evolve.privileges )
