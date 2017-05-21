@@ -23,6 +23,16 @@
 **Q:** I have an not listed question.  
 **A:** For all other questions please use our ticketsystem [Link](https://www.Aperture-Hosting.de/ticketsystem)  
   
+### How to use  
+  
+**Open Team selection:**  
+- On Init Spawn  
+- On Command: /modes , !modes , /gamemodes , !gamemodes  
+
+**Open Admin GUI:**  
+- On Command: /modesadmin , !modesadmin  
+    
+  
 ### Current Compatible Admin Mods  
   
 - [Evolve](https://github.com/Xandaros/evolve)  
