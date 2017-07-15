@@ -155,9 +155,10 @@ hook.Add("PlayerShouldTakeDamage","Modes_TakeDamage",function(ply,attacker)
 	
 	local dmg_HasPerm = PlayModes.HasPermission(ply,"can_be_killed")
 	local attacker_hasperms = PlayModes.HasPermission(ply,"can_kill")
-
 	
-	if attacker_hasperms==false and not ply == attacker then
+	
+	if attacker_hasperms==false and not (ply==attacker) then
+	
 		
 		local gamemodes_violations = attacker:GetNWInt( "violations", 0)
 		
