@@ -118,6 +118,15 @@ function PlayModes.SetTeam(ply,plyTeam,chatPrint)
 	
 	if PlayModes.GetTeam(ply)==plyTeam then return end;
 	
+	if not timer.Exists( ply:SteamID().."_modesDelay" ) then
+	
+		timer.Create( (ply:SteamID().."_modesDelay"), 5, 1, function() end )
+		
+	else
+		PlayModes.PM(ply,"Whoa buddy, You can't change your team just after you changed it. Please wait 5 seconds.")
+		return 
+	end;
+	
 	ply:SetNWString( "gamemode_team", plyTeam )
 	
 	if chatPrint then
