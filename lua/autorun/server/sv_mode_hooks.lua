@@ -157,7 +157,7 @@ hook.Add("PlayerShouldTakeDamage","Modes_TakeDamage",function(ply,attacker)
 	local attacker_hasperms = PlayModes.HasPermission(ply,"can_kill")
 
 	
-	if attacker_hasperms==false then
+	if attacker_hasperms==false and not ply == attacker then
 		
 		local gamemodes_violations = attacker:GetNWInt( "violations", 0)
 		
@@ -189,6 +189,7 @@ hook.Add("PlayerInitialSpawn","Modes_InitSpawn",function(ply)
 	
 	timer.Simple(5,function()
 		PlayModes.OpenMenu(ply)
+		ply:SetNWBool( "changed_team", false )
 		--PlayModes.SetTeam(ply,"Spectator")
 	end)
 	
