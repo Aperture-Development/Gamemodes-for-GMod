@@ -117,10 +117,10 @@ function PlayModes.SetTeam(ply,plyTeam,chatPrint)
 	end
 	
 	if PlayModes.GetTeam(ply)==plyTeam then return end;
-	if not ply:GetNWBool( "changed_team", true ) then
 	
-		ply:SetNWBool( "changed_team", true )
-		timer.Simple(5,function(ply) ply:SetNWBool( "changed_team", true ) end)
+	if not timer.Exists( ply:SteamID().."_modesDelay" ) then
+	
+		timer.Create( (ply:SteamID().."_modesDelay"), 5, 1, function() end )
 		
 	else
 		PlayModes.PM(ply,"Whoa buddy, You can't change your team just after you changed it. Please wait 5 seconds.")

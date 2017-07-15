@@ -189,7 +189,6 @@ hook.Add("PlayerInitialSpawn","Modes_InitSpawn",function(ply)
 	
 	timer.Simple(5,function()
 		PlayModes.OpenMenu(ply)
-		ply:SetNWBool( "changed_team", false )
 		--PlayModes.SetTeam(ply,"Spectator")
 	end)
 	
