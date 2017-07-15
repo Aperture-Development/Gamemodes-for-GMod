@@ -124,8 +124,8 @@ function PlayModes.SetTeam(ply,plyTeam,chatPrint)
 		
 	else
 		PlayModes.PM(ply,"Whoa buddy, You can't change your team just after you changed it. Please wait 5 seconds.")
-		return end;
-	end
+		return 
+	end;
 	
 	ply:SetNWString( "gamemode_team", plyTeam )
 	
